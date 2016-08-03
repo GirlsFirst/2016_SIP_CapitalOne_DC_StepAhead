@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--meta tags for characters, description, keywords for search engines, and authors-->
+	<meta charset="utf-8">
+	<meta name="description" content="College Application Essay Help">
+	<meta name="keywords" content="college essay, essay help, application help">
+	<meta name="author" content="Diana, Nesiah, Jada">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="finalprojectstyle.css" type="text/css" />
+	
+	<title> StepAhead Sign-Up Page </title>
+
+	<script>
+		var username = document.getElementByName("usernameInput");
+		var password = document.getElementByName("passwordInput");
+		var signup = [];
+		function EnterUserPass(key, value) {
+			signup.push({
+				key: username,
+				value: password
+			})
+			}
+
+		if (username in signup) {
+			document.getElementByName("usernameInput").innerHTML = "This username is taken. Please choose another one.";
+		}
+	</script>
+</head>
+
+<body>
+
+<!--html form input-->
+	<div class="forminput" id="stepahead-forminput">
+		<form>
+			<h1>Username:</h1> <br>
+				<input type="text" name="usernameInput"> <br>
+			<h1>Password:</h1> <br>
+				<input type="text" name="passwordInput">
+		<input class="btn btn-success btn-lg" role="button" type="submit" value="Submit">
+		</form>
+	</div>
+</body>

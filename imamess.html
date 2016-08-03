@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+
+
+<p>JOIN US HERE AT STEP AHEAD!</p>
+
+<form id="frm1" action="form_action.asp">
+  USERNAME: <input type="text" name="username"><br>
+  PASSWORD: <input type="text" name="password"><br><br>
+  <input type="button" onclick="myFunction ()" value="Sign up!">
+</form>
+
+<script>
+	var username = document.getElementByName("username");
+	var password = document.getElementByName("password");
+	var signup [];
+	function myFunction (){
+		signup.push({
+			key: username,
+			value: password
+	
+	})
+	
+	
+	if (username in signup) {
+		document.getElementByName("username").innerHTML = "Username is taken. Please another one."
+	
+	}
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
