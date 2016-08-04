@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--meta tags for characters, description, keywords for search engines, and authors-->
+	<meta charset="utf-8">
+	<meta name="description" content="College Application Essay Help">
+	<meta name="keywords" content="college essay, essay help, application help">
+	<meta name="author" content="Diana, Nesiah, Jada">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css"/>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="finalprojectstyle.css" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	
+	<title> StepAhead Submission Page </title>
+
+	<script>
+	</script>
+</head>
+
+<body>
+<!--header-->
+	<section class="intro" id="stepahead-intro">
+		<header role="banner">
+			<h1> StepAhead </h1>
+			<h2> College Essay Help </h2>
+		</header>
+		
+<!--SUBMISSION BOX AND BUTTON
+	<div class="submissions" id="stepahead-submissions">	
+		<h3> SUBMISSION </h3>
+		<p>Below is the space where you can submit your essay. We suggest that you write your essay in a separate document then copy and paste it here. </p>
+		<textarea rows="20" cols="100">
+
+		</textarea>
+		<br>
+		<button id="submitessay"> SUBMIT</button>
+	</div> -->
+<!--SUBMISSION BOX TAKE 2-->
+	<div class="container">
+		<form role="form">
+			<div class="form-group">
+				<label for="text"> <p> Submit your essay here: </p> </label>
+				<span class="help-block"> <p> This box is for the prompt. </p> </span>
+				<textarea class="form-control" rows="10" id="submission"></textarea>
+				<span class="help-block"> <p> Put your essay in here. </p> </span>
+				<textarea class="form-control" rows="50" id="submission"></textarea>
+			</div>
+			
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+
+<!--SUBMISSION BOX TAKE 3
+	<form role="form">
+		<div class="form-group">
+			<label for="usr"> 
+			<input type="text" class="form-control" id="sup">
+		</div>
+		
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>-->
+	
+<!--comment code-->
+	<div class="container">
+		<h1>COMMENT BOX</h1>
+<!-------Wrap------------>
+
+<script>
+function addComent() {
+				var name = document.getElementById("name").value;
+				var comment = document.getElementById("comment").value;
+				var name_p = document.createElement("P");
+				if (name == "") {
+					name = "Anonymous";
+				}
+				var name_t = document.createTextNode(name + " says:");
+				var comment_p = document.createElement("P");
+				var comment_t = document.createTextNode(comment);
+				name_p.appendChild(name_t); 
+				comment_p.appendChild(comment_t);
+				document.getElementById("commentbox").appendChild(name_p);
+				document.getElementById("commentbox").appendChild(comment_p);
+				alert("Done")
+				document.getElementById("name").value = "";
+				document.getElementById("comment").value = "";
+			}
+
+
+</script>
+
+<!-- Trigger the modal with a button -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Comment</button>
+
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Add Comment:</h4>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<!-- <label for="comment">Comment:</label> -->
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="pwd">Name:</label>
+								<input type="name" class="form-control" id="name">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal" onclick = "addComent()">Add</button>
+						</div>
+					</div>
+
+				  </div>
+			</div>
+			
+			<div id = "commentbox">
+				<h3>Comments:</h3>
+			</div>
+			
+		</div>
+
+		<!--<div id="wrap">
+			<div id="main">
+				<div class="row">
+					<div class="col-md-5">
+						<h3 class="heading">Comments and Responses</h3>
+					</div>
+					<div class="col-md-7">
+						<div id="upper_blank"></div>
+					</div>
+				</div>
+			</div>
+
+			<p>Your email address will not be published. Required fields are marked *</p>
+
+<!------------Form Start
+
+			<div id='form'>
+				<div class="row">
+					<div class="col-md-12">
+						<form action="" method="POST" id="commentform">
+							<div id="comment-name" class="form-row">
+								<input type = "text" placeholder = "Name (required)" name = "dname"  id = "name" >
+							</div>
+								
+							<div id="comment-email" class="form-row">
+								<input type = "text" placeholder = "Mail (will not be published) (required)" name = "demail"  id = "email">
+							</div>
+
+							<div id="comment-url" class="form-row">
+								<input type = "text" placeholder = "Website" name = "url"  id = "url" >
+							</div>
+
+							<div id="comment-message" class="form-row">
+								<textarea name = "comment" placeholder = "Message" id = "comment" ></textarea>
+							</div>
+								
+							<a href="#"><input type="submit" name="dsubmit" id="commentSubmit" value="Submit Comment"></a>
+							<input style="width: 30px" type="checkbox" value="1" name="subscribe" id="subscribe" checked="checked">
+							<p1><b>Notify me when new comments are added.</b></p1>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-------------------Reply Section
+		<div id="second">
+			<div class="row">
+				<div class="col-md-2">
+					<h3 class="second_heading"><b>Leave a Reply</b></h3>
+				</div>
+					
+				<div class="col-md-10">
+					<div class="blank"></div>
+				</div>
+			</div>
+		</div>
+			
+		<div id="middle">
+			<form>
+				<a href="#"><input type = "text" value = "reply" name = "dreply" id = "inner_reply"></a>
+			</form>
+		</div>
+	</div>-->
+
+<!--comment counter-->
+	<div class="container">
+		<h2>Badges</h2>
+		<a href="#"> <p> News <span class="badge"> 5 </p> </span></a><br>
+		<a href="#"> <p> Comments <span class="badge"> 10 </p> </span></a><br>
+		<a href="#"> <p> Updates <span class="badge"> 2 </p> </span></a>
+	</div>
+</body>

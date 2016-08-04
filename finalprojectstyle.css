@@ -1,0 +1,301 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #325050;
+  background: #fff;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 70%;
+}
+
+header {
+  height: 230px;
+  padding: 20px 0 70px 0;
+
+  background: #2d6360 50% 0 url(huntington.jpg) no-repeat; /* old IE fallback */
+
+  background-attachment: fixed, fixed, fixed, scroll;
+  background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
+  background-position: 0 0, 0 0, -5px -25px, 0 50%;
+  background-repeat: repeat, repeat, repeat, no-repeat;
+  background-size: auto, auto, auto, cover;
+  text-align: center;
+}
+
+h1, h2 {
+  padding: 0 10%;
+  margin: 0;
+  color: #fff;
+  font-weight: normal;
+}
+
+h1 {
+  padding-top: 0;
+  padding-bottom: 5px;
+  border-bottom: none;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3.2em;
+  text-transform: uppercase;
+}
+
+h1::before {
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  content: "";
+  width: 80px;
+  height: 80px;
+  margin: -20px 20px 0 0;
+  background: url(enso.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.6;
+}
+
+h2 {
+  display: block;
+  padding-top: 5px; 
+  padding-bottom: 30px; 
+  border-top: none; 
+  color: rgba(255,255,255,0.6);  /* "College Essay Help color is blueish"*/
+  font-size: 1.6em;
+  font-style: italic;
+}
+
+h2::before {
+  content: " ";
+  padding: 50px;		/*centers "College Essay Help"*/
+ }
+
+ h3 {
+  margin: 2em 0 0 0;
+  color: #2e484c;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.8em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0.75em 0; 
+  line-height: 2;
+  font-size:3.2em;
+}
+
+.summary, .preamble {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.summary {
+  padding-top: 2em;
+}
+
+.submissions {
+	padding-top: 0;
+	padding-bottom: 5px;
+	border-bottom: none;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 3.2em;
+	text-transform: uppercase;
+}
+
+.submissions::before {
+	content: " ";
+	padding: 50px;		
+}
+
+/*comment box and reply styling*/
+#wrap{
+border: 1px solid lightgray;
+alignment-adjust: central;
+width: 1000px;
+margin-left: 50px;
+margin-top: 10px;
+box-shadow: 0 5px 0 #e6e6e6;
+padding-bottom: 50px;
+
+}
+h1{
+color: blue-violet;
+text-align: center;
+}
+
+h3.heading{
+margin-left: 20px;
+background-color: #fafafa;
+font-size: 25px;
+float: left;
+padding-left: 40px;
+position: relative;
+width: 405px;
+height: 40px;
+padding-top: 5px;
+
+}
+#upper_blank{
+border-bottom: 7px solid steelblue;
+margin-top: 40px;
+margin-right: 485px;
+width: 570px;
+padding-right: 480px;
+}
+p{
+margin-left: 5px;
+padding: 8px;
+padding-left: 20px;
+}
+#name{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#email{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#url{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#comment{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 650px;
+height: 200px;
+}
+#commentSubmit{
+margin-left: 20px;
+width: 250px;
+height: 55px;
+color: white;
+font-size: 20px;
+background-color: #2c95dc;
+box-shadow: 0 3px 0 #09466f;
+margin-bottom: 30px;
+padding-left: 20px;
+border-radius: 5px;
+}
+#commentSubmit:hover {
+background-color: #09466f;
+
+}
+
+p{
+font-size: 18px;
+color: gray;
+padding-bottom: 15px;
+padding-top: 15px;
+}
+p1{
+font-size: 18px;
+padding-top: 20px;
+}
+
+h3.second_heading{
+margin-left: 0;
+margin-top: 30px;
+font-size: 20px;
+width: 250px;
+height: 50px;
+padding-top: 10px;
+padding-left: 55px;
+
+}
+#middle{
+border: 1px solid lightgray;
+width: 1000px;
+height: 200px;
+background-color: lightyellow;
+margin-left: 45px;
+text-align: left;
+margin-top: 10px;
+box-shadow: 0 2px 0 lightgray;
+}
+.blank{
+border-bottom: 7px solid steelblue;
+margin-top: 50px;
+margin-left: 50px;
+margin-right: 100px;
+width: 800px;
+}
+
+#inner_reply{
+
+margin-left: 800px;
+margin-top: 160px;
+width: 100px;
+height: 30px;
+background-color: #2c95dc;
+text-align: center;
+font-size: 18px;
+color: white;
+border-radius: 18px;
+}
+
+
+
+
+/*simple comment box css
+<div class="detailBox">
+    <div class="titleBox">
+      <label>Comment Box</label>
+        <button type="button" class="close" aria-hidden="true">&times;</button>
+    </div>
+    <div class="commentBox">
+        
+        <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="actionBox">
+        <ul class="commentList">
+            <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/50/50" />
+                </div>
+                <div class="commentText">
+                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                </div>
+            </li>
+            <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/45/45" />
+                </div>
+                <div class="commentText">
+                    <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                </div>
+            </li>
+            <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/40/40" />
+                </div>
+                <div class="commentText">
+                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Your comments" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-default">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+*/
