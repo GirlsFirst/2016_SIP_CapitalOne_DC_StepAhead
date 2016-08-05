@@ -42,15 +42,75 @@
 			<h1> StepAhead </h1>
 			<h2> College Essay Help </h2>
 		</header>
-<!--email/username/password form-->
+
+<!--SIGN IN-->
 	<div class="container">
-		<h2>Vertical (basic) form</h2>
+		<p> Log In Here! </p>
 		<form role="form">
 			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Enter email">
+				<label for="usr">Username:</label>
+				<input type="username" class="form-control" id="usr" placeholder="Enter username">
+
+				<form role="form">
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+						<span class="help-block">Make sure it's secure!</span>
+					</div>
+
+				</form>
+			</div>
+
+			<div class="checkbox">
+				<label><input type="checkbox"> Remember me</label>
+			</div>
+
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+
+<!--SIGN UP-->
+	<div class="container">
+		<p> Sign-Up Here! </p>
+		<form role="form">
+			<div class="form-group">
+				<label for="usr">Username:</label>
+				<input type="username" class="form-control" id="usr" placeholder="Enter username">
+				
+				<form role="form">
+					<div class="form-group">
+						<label for="pwd">Password:</label>
+						<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+					</div>
+
+				</form>
+			</div>
+	
+			<div class="checkbox">
+				<label><input type="checkbox"> Remember me</label>
+			</div>
+		</form>
+	
+<!--radio buttons form control-->
+		<form role="form">
+			<div class="radio">
+				<label><input type="radio" name="optradio">Student</label>
+			</div>
+    
+			<div class="radio">
+				<label><input type="radio" name="optradio">Professor</label>
+			</div>
+    
+			<div class="radio">
+				<label><input type="radio" name="optradio">Other</label>
 			</div>
 			
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+	
+			
+	<!--		
 			<div class="form-group">
 				<label for="pwd">Password:</label>
 				<input type="password" class="form-control" id="pwd" placeholder="Enter password">
@@ -62,9 +122,9 @@
 			
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
-	</div>
+	</div>-->
 	
-<!--success and warning glyphicons-->
+<!--success and warning glyphicons
 	<div class="container">
 		<h2>Horizontal form: control states</h2>
 		<form class="form-horizontal" role="form">
@@ -94,7 +154,7 @@
 		</form>
 	</div>
 
-<!--inline success and warning with glyphicons-->
+<!--inline success and warning with glyphicons
 	<div class="container">
 		<h2>Inline form: control states</h2>
 		<form class="form-inline" role="form">
@@ -126,29 +186,9 @@
 				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
 			</div>
 		</form>
-	</div>
+	</div>-->
 
-	
-<!--radio buttons form control-->
-	<div class="container">
-		<h2>Form control: radio buttons</h2>
-		<p>Student, professor, or other?</p>
-		<form role="form">
-			<div class="radio">
-				<label><input type="radio" name="optradio">Student</label>
-			</div>
-    
-			<div class="radio">
-				<label><input type="radio" name="optradio">Professor</label>
-			</div>
-    
-			<div class="radio">
-				<label><input type="radio" name="optradio">Other</label>
-			</div>
-		</form>
-	</div>
-	
-<!--help writing under password box-->
+<!--help writing under password box
 	<div class="container">
 		<h2>Help text</h2>
 		<p>Use the .help-block class to add a block level help text in forms:</p>
