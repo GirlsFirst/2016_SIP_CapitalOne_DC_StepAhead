@@ -6,25 +6,19 @@
 	<meta name="description" content="College Application Essay Help">
 	<meta name="keywords" content="college essay, essay help, application help">
 	<meta name="author" content="Diana, Nesiah, Jada">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css"/>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" href="finalprojectstyle.css" type="text/css" />
+	<link rel="stylesheet" href="siahstyle2.css" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	
 	<title> StepAhead Submission Page </title>
 
 	<script>
-		document.getElementById("submit-button").onclick = function({SubmitEssay()});
-		
-		/*SubmitEssay saves the words in the text box*/
-		function SubmitEssay() {
-			document.getElementById("submit-button").innerHTML = "THANKS FOR SUBMITTING!";
-		}
 	</script> 
 </head>
 
@@ -47,22 +41,28 @@
 		<button id="submitessay"> SUBMIT</button>
 	</div> -->
 <!--SUBMISSION BOX TAKE 2-->
-	<div class="container">
-		<form method ="POST" action ="wow.php" role="form">
+	<div class="container" id="submit-here">
+		<form role="form">
 			<div class="form-group">
 				<label for="text"> <p> Submit your essay here: </p> </label>
 				<span class="help-block"> <p> This box is for the prompt. </p> </span>
-				<input type = "text" name="prompt" maxlength="5000" size="10">
-				<!--<textarea class="form-control" rows="10" id="submission"></textarea>-->
+				<textarea class="form-control" rows="10" id="submission"></textarea>
 				<span class="help-block"> <p> Put your essay in here. </p> </span>
-				<input type ="text" name="essay" maxlength="10000" size="40">
-				<!--<textarea class="form-control" rows="50" id="submission"></textarea>-->
+				<textarea class="form-control" rows="50" id="submission"></textarea>
 			</div>
 			
-			<button type="submit" onclick="accessing.php" class="btn btn-default" id="submit-button">Submit</button>
+			<button type="submit" class="btn btn-default" id="submit-button">Submit</button>
 		</form>
 	</div>
-
+<!--script for clicking submit button-->
+	<script>
+		document.getElementById("submit-button").onclick = function(){SubmitEssay()};
+		
+		/*SubmitEssay saves the words in the text box*/
+		function SubmitEssay() {
+			document.getElementById("submit-here").innerHTML = "THANKS FOR SUBMITTING!";
+		}
+	</script> 
 <!--SUBMISSION BOX TAKE 3
 	<form role="form">
 		<div class="form-group">
@@ -79,6 +79,7 @@
 <!-------Wrap------------>
 
 <script>
+/*this is for making comments*/
 function addComent() {
 				var name = document.getElementById("name").value;
 				var comment = document.getElementById("comment").value;
@@ -101,7 +102,7 @@ function addComent() {
 
 </script>
 
-<!-- Trigger the modal with a button -->
+<!-- Trigger the modal with a button/MAKE COMMENTS -->
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Comment</button>
 
 			<!-- Modal -->
@@ -114,16 +115,19 @@ function addComent() {
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							<h4 class="modal-title">Add Comment:</h4>
 						</div>
+						
 						<div class="modal-body">
 							<div class="form-group">
 								<!-- <label for="comment">Comment:</label> -->
 								<textarea class="form-control" rows="5" id="comment"></textarea>
 							</div>
+							
 							<div class="form-group">
 								<label for="pwd">Name:</label>
 								<input type="name" class="form-control" id="name">
 							</div>
 						</div>
+						
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal" onclick = "addComent()">Add</button>
 						</div>
@@ -135,9 +139,36 @@ function addComent() {
 			<div id = "commentbox">
 				<h3>Comments:</h3>
 			</div>
-			
+
 		</div>
 
+<!--comment counter-->
+	<div class="container">
+		<h2>Badges</h2>
+		<a href="#"> <p> Comments <span class="badge" id="counter"> none </p> </span></a><br>
+	</div>
+
+<script>
+var count-number;
+var CommentCounter = [];
+CommentCounter.push(comment-add);
+comment-number = CommentCounter.length;
+
+document.getElementById("counter").onclick = function(){CountComments()};
+		
+/*display new comment number*/
+function CountComments() {
+	document.getElementById("counter").innerHTML = "THANKS FOR SUBMITTING!";
+}
+</script>
+	
+	
+	
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="js/siahscripts.js"></script>
 		<!--<div id="wrap">
 			<div id="main">
 				<div class="row">
@@ -203,12 +234,4 @@ function addComent() {
 			</form>
 		</div>
 	</div>-->
-
-<!--comment counter-->
-	<div class="container">
-		<h2>Badges</h2>
-		<a href="#"> <p> News <span class="badge"> 5 </p> </span></a><br>
-		<a href="#"> <p> Comments <span class="badge"> 10 </p> </span></a><br>
-		<a href="#"> <p> Updates <span class="badge"> 2 </p> </span></a>
-	</div>
 </body>
