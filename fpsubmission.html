@@ -19,6 +19,12 @@
 	<title> StepAhead Submission Page </title>
 
 	<script>
+		document.getElementById("submit-button").onclick = function({SubmitEssay()});
+		
+		/*SubmitEssay saves the words in the text box*/
+		function SubmitEssay() {
+			document.getElementById("submit-button").innerHTML = "THANKS FOR SUBMITTING!";
+		}
 	</script> 
 </head>
 
@@ -41,28 +47,22 @@
 		<button id="submitessay"> SUBMIT</button>
 	</div> -->
 <!--SUBMISSION BOX TAKE 2-->
-	<div class="container" id="submit-here">
-		<form role="form">
+	<div class="container">
+		<form method ="POST" action ="wow.php" role="form">
 			<div class="form-group">
 				<label for="text"> <p> Submit your essay here: </p> </label>
 				<span class="help-block"> <p> This box is for the prompt. </p> </span>
-				<textarea class="form-control" rows="10" id="submission"></textarea>
+				<input type = "text" name="prompt" maxlength="5000" size="10">
+				<!--<textarea class="form-control" rows="10" id="submission"></textarea>-->
 				<span class="help-block"> <p> Put your essay in here. </p> </span>
-				<textarea class="form-control" rows="50" id="submission"></textarea>
+				<input type ="text" name="essay" maxlength="10000" size="40">
+				<!--<textarea class="form-control" rows="50" id="submission"></textarea>-->
 			</div>
 			
-			<button type="submit" class="btn btn-default" id="submit-button">Submit</button>
+			<button type="submit" onclick="accessing.php" class="btn btn-default" id="submit-button">Submit</button>
 		</form>
 	</div>
-<!--script for clicking submit button-->
-	<script>
-		document.getElementById("submit-button").onclick = function(){SubmitEssay()};
-		
-		/*SubmitEssay saves the words in the text box*/
-		function SubmitEssay() {
-			document.getElementById("submit-here").innerHTML = "THANKS FOR SUBMITTING!";
-		}
-	</script> 
+
 <!--SUBMISSION BOX TAKE 3
 	<form role="form">
 		<div class="form-group">
