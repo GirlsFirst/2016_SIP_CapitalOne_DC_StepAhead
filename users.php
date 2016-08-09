@@ -20,12 +20,53 @@
 		//$lastname = trim($_POST['last']);
 		//$email = trim($_POST['email']);
 		//$password = trim($_POST['password']);
+		
+
 
 		
-		$username = $_POST["usr"];
-		$password = $_POST["pswrd"];
+		//$username = $_POST["usr"];
+		//assword = $_POST["pswrd"];
 		
-		$insert_sql = "INSERT INTO users (user_name, user_pass) VALUES ('$username', '$password')";
+		//$insert_sql = "INSERT INTO users (user_name, user_pass) VALUES ('$username', '$password')";
+		
+		
+		
+		
+		/////////////////
+		
+		
+		
+		if(isset($_POST['usr'])) {
+			$username = trim($_POST['usr']);
+			$password = trim($_POST['pswrd']);
+			
+			//look up user
+			$user_query = sprintf("SELECT user_name, user_password FROM users WHERE usr = '%s' AND password = '%s'", $username, $password);
+			
+			echo "query: " . $user_query;
+			$results = mysql_query($user_query, $con);
+			
+			echo "results: " . mysql_num_rows($results);
+			
+			if (mysql_num_rows($results) == 1) {
+				echo "logged in";
+				$result = mysql_fetch_array($results,$con);
+				$user_id = $result['user_id'];
+				//setcookie('user_id', $user_id);
+				//setcookie('username', $result['email']);
+				header('Location: http://www.gwc5.sunny-banana.com/fpsubmission.html');
+				exit();
+			} else {
+				$errormessage = "Incorrect email/username or password";
+				exit();
+			}
+		}
+	} else {
+		
+	header('Location: http://www.gwc5.sunny-banana.com/fpsubmission.html'); //redirect to home page
+	}
+
+?>
 
 
 			

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--meta tags for characters, description, keywords for search engines, and authors-->
+	<meta charset="utf-8">
+	<meta name="description" content="College Application Essay Help">
+	<meta name="keywords" content="college essay, essay help, application help">
+	<meta name="author" content="Diana, Nesiah, Jada">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css"/>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="siahstyle2.css" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	
+	<title> StepAhead Submission! Page </title>
+
+	<script>
+	</script> 
+</head>
+
+<body
+<!--actual header-->
+	<header id="first" role="banner">
+		<div class="header-content">
+			<div class="inner">
+				<h1 class="cursive"> StepAhead </h1>
+				<h4>Get tips and tricks to excel in the college process</h4>
+				<hr>
+				<a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">End Video</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+			</div>
+		</div>
+
+		<video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+			<source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+		</video>
+	</header
+
+<!--SUBMISSION BOX TAKE 2-->
+	<div class="container" id="submit-here">
+		<form method="POST" action="essays.php" role="form">
+			<div class="form-group">
+				<label for="text"> <p> Submit your essay here: </p> </label>
+				<span class="help-block"> <p>Username: </p> </span>
+				<textarea name="usrn"class="form-control" rows="1" id="username"></textarea>
+				<span class="help-block"> <p> This box is for the prompt. </p> </span>
+				<textarea name="prmt"class="form-control" rows="10" id="prompt"></textarea>
+				<span class="help-block"> <p> Put your essay in here. </p> </span>
+				<textarea name="subm"class="form-control" rows="50" id="submission"></textarea>
+			</div>
+			
+			<button type="submit" class="btn btn-default" id="submit-button">Submit</button>
+		</form>
+	</div>
+
+<!--script for clicking submit button
+	<script>
+		/*document.getElementById("submit-button").onclick = function(){SubmitEssay()};*/
+		
+		/*SubmitEssay saves the words in the text box*/
+		/*function SubmitEssay() {*/
+			/*document.getElementById("submit-here").innerHTML = "THANKS FOR SUBMITTING!";*/
+		/*}*/
+	</script> -->
+
+<!--comment code-->
+	<div class="container">
+		<h1>COMMENT BOX</h1>
+<!-------Wrap------------>
+
+<script>
+/*this is for making comments*/
+function addComent() {
+				var name = document.getElementById("name").value;
+				var comment = document.getElementById("comment").value;
+				var name_p = document.createElement("P");
+				if (name == "") {
+					name = "Anonymous";
+				}
+				var name_t = document.createTextNode(name + " says:");
+				var comment_p = document.createElement("P");
+				var comment_t = document.createTextNode(comment);
+				name_p.appendChild(name_t); 
+				comment_p.appendChild(comment_t);
+				document.getElementById("commentbox").appendChild(name_p);
+				document.getElementById("commentbox").appendChild(comment_p);
+				alert("Done")
+				document.getElementById("name").value = "";
+				document.getElementById("comment").value = "";
+			}
+</script>
+
+<!-- Trigger the modal with a button/MAKE COMMENTS -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Comment</button>
+
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Add Comment:</h4>
+						</div>
+						
+						<div class="modal-body">
+							<div class="form-group">
+								<!-- <label for="comment">Comment:</label> -->
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+							
+							<div class="form-group">
+								<label for="pwd">Name:</label>
+								<input type="name" class="form-control" id="name">
+							</div>
+						</div>
+						
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal" onclick = "addComent()">Add</button>
+						</div>
+					</div>
+
+				  </div>
+			</div>
+			
+			<div id = "commentbox">
+				<h3>Comments:</h3>
+			</div>
+
+		</div>
+
+<!--comment counter-->
+	<div class="container">
+		<h2>Badges</h2>
+		<a href="#"> <p> Comments <span class="badge" id="counter"> none </p> </span></a><br>
+	</div>
+
+<script>
+var count-number;
+var CommentCounter = [];
+CommentCounter.push(comment-add);
+comment-number = CommentCounter.length;
+
+document.getElementById("counter").onclick = function(){CountComments()};
+		
+/*display new comment number*/
+function CountComments() {
+	document.getElementById("counter").innerHTML = "THANKS FOR SUBMITTING!";
+}
+</script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="js/siahscripts.js"></script>
+</body>
